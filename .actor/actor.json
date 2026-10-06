@@ -1,0 +1,2 @@
+{ "actorSpecification": 1, "name": "remote-jobs-aggregator", "title": "Remote Jobs Aggregator: 6 Job Boards, One Clean Feed",
+  "version": "0.1", "buildTag": "latest", "input": "./input_schema.json", "dockerfile": "./Dockerfile", "output": "./output_schema.json" }

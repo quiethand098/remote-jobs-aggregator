@@ -1,0 +1,15 @@
+{
+  "title": "Remote Jobs Aggregator input", "type": "object", "schemaVersion": 1,
+  "properties": {
+    "keywords": { "title": "Keywords", "type": "array", "editor": "stringList",
+      "description": "Keep jobs whose title, company, tags or description contain ANY of these words (e.g. python, devops, designer). Leave empty for all jobs.", "prefill": ["python"] },
+    "excludeKeywords": { "title": "Exclude keywords", "type": "array", "editor": "stringList", "description": "Drop jobs containing any of these words in the title or tags (e.g. intern, junior)." },
+    "sources": { "title": "Sources", "type": "array", "editor": "select",
+      "description": "Job boards to query. Default is all.",
+      "items": { "type": "string", "enum": ["remoteok", "remotive", "weworkremotely", "himalayas", "arbeitnow", "jobicy", "hn_who_is_hiring"] },
+      "default": ["remoteok", "remotive", "weworkremotely", "himalayas", "arbeitnow", "jobicy", "hn_who_is_hiring"] },
+    "minSalaryUsd": { "title": "Minimum yearly salary (USD)", "type": "integer", "description": "Only keep jobs that publish a salary at or above this. 0 disables the filter.", "default": 0, "minimum": 0 },
+    "maxAgeDays": { "title": "Max job age (days)", "type": "integer", "description": "Skip jobs older than this.", "default": 14, "minimum": 1, "maximum": 90 },
+    "maxResults": { "title": "Max results", "type": "integer", "description": "Stop after this many jobs (newest first).", "default": 100, "minimum": 1, "maximum": 5000 }
+  }
+}

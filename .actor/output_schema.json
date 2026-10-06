@@ -1,0 +1,2 @@
+{ "actorOutputSchemaVersion": 1, "title": "Remote jobs output",
+  "properties": { "results": { "type": "string", "title": "Jobs", "template": "{{links.apiDefaultDatasetItemsUrl}}" } } }
